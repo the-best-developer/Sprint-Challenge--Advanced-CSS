@@ -1,1 +1,32 @@
 // Mixins Here
+
+.button (@height, @width, @bg-color, @txt-color) {
+    width: @width;
+    height: @height;
+    background-color: @bg-color;
+    text-align: center;
+    padding: @height / 4;
+    border-radius: 3px;
+    color: @txt-color;
+
+    &:hover {
+        background-color: @txt-color;
+        
+        a {
+            color: @bg-color;
+        }
+    }
+
+    a{
+        color: @txt-color;
+        text-decoration: none;
+        font-size: 1.8rem;
+        
+    }
+}
+
+.btn-fix-mobile (@height) {
+    width: 100%;
+    height: @height;
+    padding: @height / 2.8;
+}
